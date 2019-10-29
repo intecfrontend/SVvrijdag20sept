@@ -89,19 +89,24 @@
         };
         user.sayName();*/
     /*
-        //ES6
-        const user = {
-          name: "Eddy",
-          age: 25,
-          sayName: function () {
-            console.log(`My name is ${this.name}`);
-            const nameAge = () => {
-              console.log(`My name is ${this.name} and my age is ${this.age}`);
-            };
-            nameAge();
-          }
+         //ES6 copy this and start html boilerplate  here
+  <p id="demo">test</p>
+  <script>
+    const user = {
+      name: "Eddy",
+      age: 25,
+      sayName: function () {
+        console.log(`My name is ${this.name}`);
+        const nameAge = () => {
+          return (`My name is ${this.name} and my age is ${this.age}`);
         };
-        user.sayName();*/
+        //nameAge();
+        document.getElementById("demo").innerHTML = nameAge(); // sayName;
+
+      }
+    };
+    user.sayName();
+  </script>
     /*
         button.addEventListener('click', function(){ this /*dit is dus de button, links van het punt, 
             bij het invoegen van een andere functie var addFade = function(){this.style.display = "none"} verliest this zijn betekenis 
