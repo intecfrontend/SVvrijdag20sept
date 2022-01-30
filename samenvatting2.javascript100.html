@@ -11,8 +11,9 @@
 <body>
     <h4 id="demo1">test5</h4>
     <h4 id="demo2" class="example">test6</h4>
-    <h4 id="demo2" class="example">test6</h4>
-    <h4 id="demo2" class="example">test6</h4>
+    <h3 id="nameplacer">test6</h3>
+    <!-- <h4 id="demo2" class="example">test6</h4>
+    <h4 id="demo2" class="example">test6</h4> -->
     <h4 id="demo">test4</h4>
 
 
@@ -30,7 +31,6 @@
         }
         NaamToner("Jan", 32);
 
-        //deze is undefined
         //console.log(`${naam}`)
 
         console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
@@ -56,7 +56,15 @@
         for (let i = 0; i < namen.length; i++) {
             document.write(namen[i] + '<br/>');
         }
-        //bij   i <= namen.lenth   komt er één undefined achter
+        // I can avoid document.write
+        
+        let text = "";
+        for (let i = 0; i < namen.length; i++) {
+            text += (namen[i] + '<br/>');
+        }
+        document.getElementById("nameplacer").innerHTML = text;
+
+        //bij   i <= namen.length   komt er één undefined achter
 
 
         // namen.forEach(fun(parameter) naam: string document.write(naam  + '<br/>'); });
